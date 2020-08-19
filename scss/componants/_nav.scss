@@ -1,0 +1,14 @@
+nav {
+    @include flex($dir: row, $just: space-between, $align: center);
+    height: 100%;
+    padding: 0px 16px;
+}
+
+.fas {
+    font-size: 3em;
+    color: $white;
+}
+
+.overlay {
+    display: none;
+}
