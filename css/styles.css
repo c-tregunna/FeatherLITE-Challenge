@@ -439,12 +439,64 @@ nav {
 }
 
 .overlay {
-  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 80px;
+  left: 0;
+  background-color: rgba(172, 174, 176, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  background: #4a5054;
+  padding: 20px 10px;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 4px 4px gray;
+}
+.overlay-content > a {
+  background-color: #575d61;
+  margin: 8px;
+  font-size: 1.25em;
+  font-weight: 300;
+  padding: 8px;
+  text-decoration: none;
+  color: #f2f2f2;
+  display: block;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+.overlay-content a:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
 
 .logo {
   height: 50px;
   filter: invert(100%);
+}
+
+.sign-out {
+  height: 30px;
+  filter: invert(100%);
+  margin-left: 16px;
 }
 
 /*# sourceMappingURL=styles.css.map */
