@@ -1,0 +1,13 @@
+input[type="search"] {
+    height: 2.5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid darken($white, 20%);
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+input[type="search"]::placeholder {
+    color: darken($white, 30%);
+    font-weight: 300;
+}
