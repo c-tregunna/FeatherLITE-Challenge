@@ -2,7 +2,8 @@
 // Menu icon animation
 //----------------------
 
-const menu = document.querySelector('.contain');
+const contain = document.querySelector('.contain');
+const menu = document.querySelector('.menu');
 const list = document.querySelector('.list');
 
 const topBar = document.querySelector('.top');
@@ -11,8 +12,8 @@ const botBar = document.querySelector('.bot');
 
 const overlay = document.getElementById('myNav');
 
-menu.addEventListener('click', e => {
-    if (e.target.className === 'contain') {
+contain.addEventListener('click', e => {
+    if (e.target.className === 'menu') {
         topBar.classList.toggle('changeTop');
         midBar.classList.toggle('changeMid');
         botBar.classList.toggle('changeBot');
