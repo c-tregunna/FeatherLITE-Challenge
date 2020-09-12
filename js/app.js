@@ -1,5 +1,5 @@
 //----------------------
-// Menu slide in and out
+// Menu icon animation
 //----------------------
 
 const menu = document.querySelector('.contain');
@@ -9,12 +9,21 @@ const topBar = document.querySelector('.top');
 const midBar = document.querySelector('.mid');
 const botBar = document.querySelector('.bot');
 
-menu.addEventListener('click', () => {
-	topBar.classList.toggle('changeTop');
-	midBar.classList.toggle('changeMid');
-	botBar.classList.toggle('changeBot');
+const overlay = document.getElementById('myNav');
 
-list.classList.toggle('hidden')
+menu.addEventListener('click', e => {
+    if (e.target.className === 'contain') {
+        topBar.classList.toggle('changeTop');
+        midBar.classList.toggle('changeMid');
+        botBar.classList.toggle('changeBot');
+        overlay.classList.toggle('overlay__full');
+        overlay.style.transition = "all .8s";
+    }
 });
+
+//----------------------
+// End Menu icon animation
+//----------------------
+
 
 

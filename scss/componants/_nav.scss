@@ -4,20 +4,8 @@ nav {
     padding: 0px 16px;
 }
 
-
-* {
-	box-sizing: border-box;
-	margin: 0px;
-	padding: 0px;
-}
-
-body {
-	background: lightblue;
-}
-
 .contain {
 	background: transparent;
-	padding: 20px;
 }
 
 .menu {
@@ -29,11 +17,10 @@ body {
 .mid,
 .bot {
 	width: 60px;
-	height: 6px;
-	background: white;
-	margin: 6px;
+	height: 5px;
+	background: $white;
+	margin: 10px;
 	transition: .9s;
-	box-shadow: 1px 1px 1px #ddd;
 	border-radius: 2px;
 }
 
@@ -79,58 +66,47 @@ body {
 	border-radius: 4px;
 }
 
-.hidden {
-	height: 110px;
-}
-// .fas {
-//     font-size: 3em;
-//     color: $white;
-// }
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+    background-color: $overlay;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
 
-// .overlay {
-//     height: 100%;
-//     width: 0;
-//     position: fixed;
-//     z-index: 1;
-//     top: 80px;
-//     left: 0;
-//     background-color: $overlay;
-//     overflow-x: hidden;
-//     transition: 0.5s;
-//   }
+  .overlay__full {
+    height: 100%;
+  }
 
-//   .overlay-content {
-//     position: relative;
-//     background: $overlay-menu;
-//     padding: 20px 10px;
-//     top: 0;
-//     width: 100%;
-//     text-align: center;
-//     box-shadow: 0px 4px 4px lighten($black, 50%);
-//     & > a {
-//         background-color: $overlay-menu-items;
-//         margin: 8px;
-//         font-size: 1.25em;
-//         font-weight: 300;
-//         padding: 8px;
-//         text-decoration: none;
-//         color: darken($white, 5%);
-//         display: block;
-//         transition: 0.3s;
-//         border-radius: 4px;
-//     }
-//     & a:last-child {
-//         @include flex($align: center, $just: center);
-//     }
-//   }
+  .overlay-content {
+    position: relative;
+    background: $overlay-menu;
+    padding: 20px 10px;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 4px lighten($black, 50%);
+    & > a {
+        background-color: $overlay-menu-items;
+        margin: 8px;
+        font-size: 1.25em;
+        font-weight: 300;
+        padding: 8px;
+        text-decoration: none;
+        color: darken($white, 5%);
+        display: block;
+        transition: 0.3s;
+        border-radius: 4px;
+    }
+    & a:last-child {
+        @include flex($align: center, $just: center);
+    }
+  }
 
-//   .overlay a:hover, .overlay a:focus {
-//     color: #f1f1f1;
-//   }
-
-//   .overlay .closebtn {
-//     position: absolute;
-//     top: 20px;
-//     right: 45px;
-//     font-size: 60px;
-//   }
+  // .overlay a:hover, .overlay a:focus {
+  //   color: #f1f1f1;
+  // }
