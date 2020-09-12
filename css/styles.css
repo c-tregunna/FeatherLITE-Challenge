@@ -440,6 +440,7 @@ nav {
 .menu {
   display: inline-block;
   cursor: pointer;
+  padding: 20px;
 }
 
 .top,
@@ -454,7 +455,7 @@ nav {
 }
 
 .changeTop {
-  transform: rotate(-405deg) translate(-10px, 7px);
+  transform: rotate(-405deg) translate(-11px, 10px);
   width: 40px;
 }
 
@@ -463,7 +464,7 @@ nav {
 }
 
 .changeBot {
-  transform: rotate(405deg) translate(-9px, -9px);
+  transform: rotate(405deg) translate(-10px, -10px);
   width: 40px;
 }
 
