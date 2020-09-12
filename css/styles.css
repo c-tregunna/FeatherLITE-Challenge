@@ -433,59 +433,82 @@ nav {
   padding: 0px 16px;
 }
 
-.fas {
-  font-size: 3em;
-  color: #FFF;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-.overlay {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
+body {
+  background: lightblue;
+}
+
+.contain {
+  background: transparent;
+  padding: 20px;
+}
+
+.menu {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.top,
+.mid,
+.bot {
+  width: 60px;
+  height: 6px;
+  background: white;
+  margin: 6px;
+  transition: 0.9s;
+  box-shadow: 1px 1px 1px #ddd;
+  border-radius: 2px;
+}
+
+.changeTop {
+  transform: rotate(-405deg) translate(-10px, 7px);
+  width: 40px;
+}
+
+.changeMid {
+  opacity: 0;
+}
+
+.changeBot {
+  transform: rotate(405deg) translate(-9px, -9px);
+  width: 40px;
+}
+
+/* menu */
+.list {
+  background: transparent;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  z-index: 100;
+  position: absolute;
   top: 80px;
-  left: 0;
-  background-color: rgba(172, 174, 176, 0.8);
-  overflow-x: hidden;
-  transition: 0.5s;
+  height: 0;
+  overflow: hidden;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
-.overlay-content {
-  position: relative;
-  background: #4a5054;
-  padding: 20px 10px;
-  top: 0;
-  width: 100%;
+.list li {
+  background: #FFF;
+  list-style-type: none;
+  margin: 3px;
+  padding: 4px;
+  width: 80%;
   text-align: center;
-  box-shadow: 0px 4px 4px gray;
-}
-.overlay-content > a {
-  background-color: #575d61;
-  margin: 8px;
-  font-size: 1.25em;
-  font-weight: 300;
-  padding: 8px;
-  text-decoration: none;
-  color: #f2f2f2;
-  display: block;
-  transition: 0.3s;
   border-radius: 4px;
 }
-.overlay-content a:last-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+.hidden {
+  height: 110px;
 }
 
 .logo {
