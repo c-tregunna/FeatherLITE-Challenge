@@ -2,9 +2,8 @@
 // Menu icon animation
 //----------------------
 
-const contain = document.querySelector('.contain');
+// const contain = document.querySelector('.contain');
 const menu = document.querySelector('.menu');
-const list = document.querySelector('.list');
 
 const topBar = document.querySelector('.top');
 const midBar = document.querySelector('.mid');
