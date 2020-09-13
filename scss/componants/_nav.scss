@@ -26,6 +26,7 @@ nav {
 	transition: .9s;
   border-radius: 2px;
   z-index: 1000000;
+  pointer-events: none;
 }
 
 .changeTop {

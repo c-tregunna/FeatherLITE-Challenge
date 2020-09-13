@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -462,6 +463,7 @@ nav {
   transition: 0.9s;
   border-radius: 2px;
   z-index: 1000000;
+  pointer-events: none;
 }
 
 .changeTop {
@@ -569,6 +571,22 @@ input[type=search],
   border: 1px solid #cccccc;
   border-radius: 4px;
   padding-left: 10px;
+  position: relative;
+}
+
+main:before {
+  content: "";
+  font-family: FontAwesome;
+  color: #FFF;
+  font-size: 2em;
+  top: 171px;
+  left: 80%;
+  padding: 4px;
+  background-color: #bfabc7;
+  position: absolute;
+  z-index: 2000;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 input[type=search]::placeholder {
