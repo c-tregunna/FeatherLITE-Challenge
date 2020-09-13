@@ -1,4 +1,5 @@
-input[type="search"] {
+input[type="search"],
+.create-note {
     height: 2.5em;
     width: 100%;
     box-sizing: border-box;
@@ -10,4 +11,9 @@ input[type="search"] {
 input[type="search"]::placeholder {
     color: darken($white, 30%);
     font-weight: 300;
+}
+
+.create-note {
+    box-shadow: 0px 4px 4px darken($white, 20%);
+    @include flex($dir: row, $just: space-between, $align: center);
 }

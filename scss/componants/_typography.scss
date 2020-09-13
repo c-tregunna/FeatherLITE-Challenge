@@ -1,9 +1,13 @@
 .main_heading__mob {
-    color: $mob-headings;
+    color: $font;
     letter-spacing: 1px;
     font-weight: 300;
     & span {
         text-transform: uppercase;
         font-weight: bold;
     }
+}
+
+.create-note p {
+    font-size: 1.25em
 }

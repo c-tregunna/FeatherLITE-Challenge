@@ -6,6 +6,7 @@ body {
     background: $white;
     font-size: 1em;
     font-family: $main-font;
+    color: $font;
 }
 
 header {
@@ -15,4 +16,6 @@ header {
 
 main {
     padding: 10px 30px;
+    max-width: 1200px;
+    margin: auto;
 }

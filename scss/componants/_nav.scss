@@ -2,10 +2,12 @@ nav {
     @include flex($dir: row, $just: space-between, $align: center);
     height: 100%;
     padding: 0px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .contain {
-	background: transparent;
+  background: transparent;
 }
 
 .menu {
@@ -22,12 +24,14 @@ nav {
 	background: $white;
 	margin: 10px;
 	transition: .9s;
-	border-radius: 2px;
+  border-radius: 2px;
+  z-index: 1000000;
 }
 
 .changeTop {
 	transform: rotate(-405deg)  translate(-11px, 10px);
-	width: 60px;
+  width: 60px;
+  z-index: 1000001;
 }
 
 .changeMid {
@@ -36,7 +40,8 @@ nav {
 
 .changeBot {
 	transform: rotate(405deg)  translate(-10px, -10px);
-	width: 60px;
+  width: 60px;
+  z-index: 1000001;
 }
 
 /* menu */
@@ -67,7 +72,7 @@ nav {
     box-shadow: 0px 4px 4px lighten($black, 50%);
     & > a {
         background-color: $overlay-menu-items;
-        margin: 8px;
+        margin: 8px auto;
         font-size: 1.25em;
         font-weight: 300;
         padding: 8px;
@@ -77,6 +82,7 @@ nav {
         transition: 0.3s;
         border-radius: 4px;
         border: 1px solid transparent;
+        max-width: 1200px;
     }
     & a:hover {
       border: 1px solid darken($white, 30%);

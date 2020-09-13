@@ -12,7 +12,7 @@ const botBar = document.querySelector('.bot');
 
 const overlay = document.getElementById('myNav');
 
-contain.addEventListener('click', e => {
+menu.addEventListener('click', e => {
     if (e.target.className === 'menu') {
         topBar.classList.toggle('changeTop');
         midBar.classList.toggle('changeMid');
