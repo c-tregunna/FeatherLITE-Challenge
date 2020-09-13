@@ -25,14 +25,12 @@ nav {
 	margin: 10px;
 	transition: .9s;
   border-radius: 2px;
-  z-index: 1000000;
   pointer-events: none;
 }
 
 .changeTop {
 	transform: rotate(-405deg)  translate(-11px, 10px);
   width: 60px;
-  z-index: 1000001;
 }
 
 .changeMid {
@@ -42,7 +40,6 @@ nav {
 .changeBot {
 	transform: rotate(405deg)  translate(-10px, -10px);
   width: 60px;
-  z-index: 1000001;
 }
 
 /* menu */
@@ -64,10 +61,9 @@ nav {
   }
 
   .overlay-content {
-    position: relative;
     background: $overlay-menu;
     padding: 20px 10px;
-    top: 0;
+    top: 80px;
     width: 100%;
     text-align: center;
     box-shadow: 0px 4px 4px lighten($black, 50%);

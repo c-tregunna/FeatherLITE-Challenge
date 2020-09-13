@@ -11,6 +11,9 @@ const botBar = document.querySelector('.bot');
 
 const overlay = document.getElementById('myNav');
 
+// let dot = document.getElementsByClassName('dot');
+let dot = document.querySelector('.dot');
+
 menu.addEventListener('click', e => {
     if (e.target.className === 'menu') {
         topBar.classList.toggle('changeTop');
@@ -23,6 +26,24 @@ menu.addEventListener('click', e => {
 
 //----------------------
 // End Menu icon animation
+//----------------------
+
+//----------------------
+// Create random color for dot
+//----------------------
+
+function generateRandomColor()
+{
+    let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16); //167777215 amount of colors that exisit black to white
+    return randomColor;
+    //random color will be freshly served
+}
+
+console.log(generateRandomColor());
+dot.style.backgroundColor = generateRandomColor() // -> #e1ac94
+
+//----------------------
+// End create random color for dot
 //----------------------
 
 
