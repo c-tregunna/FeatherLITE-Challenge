@@ -15,6 +15,7 @@ let dots = document.querySelectorAll('.dot');
 
 const modal = document.querySelector('.modal');
 const createNote = document.querySelector('.create-note');
+const modalClose = document.querySelector('.modal-content__close ');
 
 menu.addEventListener('click', e => {
     if (e.target.className === 'menu') {
@@ -35,6 +36,10 @@ menu.addEventListener('click', e => {
 //----------------------
 
 createNote.addEventListener('click', e => {
+    modal.classList.toggle('show');
+});
+
+modalClose.addEventListener('click', e => {
     modal.classList.toggle('show');
 });
 
