@@ -44,6 +44,20 @@ modalClose.addEventListener('click', e => {
 });
 
 //----------------------
+// End show create note modal
+//----------------------
+
+//----------------------
+// Add note to page
+//----------------------
+
+//click the post note button
+//create div note element
+//populate with input values
+//append it to the note container
+//eeek!!
+
+//----------------------
 // Create random color for dot on the page notes
 //----------------------
 
