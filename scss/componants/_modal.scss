@@ -5,6 +5,7 @@
     background: $overlay;
     position: fixed;
     top: 0;
+    left: 0;
     &-content {
         margin: 10vh auto;
         width: 90%;
@@ -21,13 +22,32 @@
     }
 }
 
+.modal-content__close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-weight: bold;
+    color: $note-bg;
+    transition: color .4s ease;
+    &:hover {
+        color: $black;
+    }
+}
+
+.show {
+    display: none;
+}
+
 .modal-content__colors {
-    width: 95%;
+    width: 100%;
     background: lighten($note-bg, 2%);
     border-radius: 2px;
     margin: auto;
     padding: 10px 6px;
-    @include flex($dir: row, $align: center, $just: space-around);
+    @include flex($dir: row, $align: center, $just: space-between);
+    @include medq ($break-m) {
+        width: 95%;
+    }
     & div {
         height: 15px;
         width: 15px;

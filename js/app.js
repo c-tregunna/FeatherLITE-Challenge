@@ -11,8 +11,10 @@ const botBar = document.querySelector('.bot');
 
 const overlay = document.getElementById('myNav');
 
-// let dot = document.getElementsByClassName('dot');
 let dots = document.querySelectorAll('.dot');
+
+const modal = document.querySelector('.modal');
+const createNote = document.querySelector('.create-note');
 
 menu.addEventListener('click', e => {
     if (e.target.className === 'menu') {
@@ -29,7 +31,15 @@ menu.addEventListener('click', e => {
 //----------------------
 
 //----------------------
-// Create random color for dot
+// show create note modal
+//----------------------
+
+createNote.addEventListener('click', e => {
+    modal.classList.toggle('show');
+});
+
+//----------------------
+// Create random color for dot on the page notes
 //----------------------
 
 function generateRandomColor()

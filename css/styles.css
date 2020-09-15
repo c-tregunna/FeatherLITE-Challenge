@@ -801,6 +801,7 @@ button {
   background: rgba(172, 174, 176, 0.8);
   position: fixed;
   top: 0;
+  left: 0;
 }
 .modal-content {
   margin: 10vh auto;
@@ -820,16 +821,37 @@ button {
   padding: 10px;
 }
 
+.modal-content__close {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-weight: bold;
+  color: #f0f0f0;
+  transition: color 0.4s ease;
+}
+.modal-content__close:hover {
+  color: #000;
+}
+
+.show {
+  display: none;
+}
+
 .modal-content__colors {
-  width: 95%;
+  width: 100%;
   background: whitesmoke;
   border-radius: 2px;
   margin: auto;
   padding: 10px 6px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .modal-content__colors {
+    width: 95%;
+  }
 }
 .modal-content__colors div {
   height: 15px;
