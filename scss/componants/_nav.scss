@@ -4,6 +4,10 @@ nav {
     padding: 0px;
     max-width: 1200px;
     margin: auto;
+    @include medq($break-m) {
+      @include flex($dir: row-reverse);
+      padding-left: 20px;
+    }
 }
 
 .contain {
@@ -11,9 +15,38 @@ nav {
 }
 
 .menu {
-	display: inline-block;
+  display: inline-block;
   cursor: pointer;
   padding: 20px;
+  @include medq($break-m) {
+    display: none;
+  }
+  &-tablet {
+    display: none;
+    flex-basis: 100%;
+    text-align: right;
+    @include medq ($break-m) {
+      @include flex($dir: row, $align: center, $just: flex-end);
+    }
+    & a {
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      color: $white;
+      font-size: 1.5em;
+      font-weight: 200;
+      border-right: 1px solid white;
+      padding: 0px 8px 0 20px;
+      & .menu__span {
+        color: #f4cbe9;
+      }
+      &:last-child {
+        border-right: none;
+        padding-left: 40px;
+      }
+    }
+  }
+
 }
 
 .top,
@@ -88,7 +121,3 @@ nav {
         @include flex($align: center, $just: center);
     }
   }
-
-  // .overlay a:hover, .overlay a:focus {
-  //   color: #f1f1f1;
-  // }

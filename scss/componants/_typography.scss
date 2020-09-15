@@ -2,6 +2,11 @@
     color: $font;
     letter-spacing: 1px;
     font-weight: 300;
+    @include medq($break-m) {
+        margin-top: -70px;
+        margin-left: 50px;
+        color: $white;
+    }
     & span {
         text-transform: uppercase;
         font-weight: bold;
@@ -19,4 +24,12 @@
 
 .create-note p {
     font-size: 1.25em;
+}
+
+.modal-content__header h3 {
+    font-weight: 300;
+}
+
+.modal-content__header h5 {
+    text-align: left;
 }

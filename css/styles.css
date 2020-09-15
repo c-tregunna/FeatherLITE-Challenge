@@ -441,6 +441,13 @@ nav {
   max-width: 1200px;
   margin: auto;
 }
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 20px;
+  }
+}
 
 .contain {
   background: transparent;
@@ -450,6 +457,41 @@ nav {
   display: inline-block;
   cursor: pointer;
   padding: 20px;
+}
+@media (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+.menu-tablet {
+  display: none;
+  flex-basis: 100%;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .menu-tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.menu-tablet a {
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 1.5em;
+  font-weight: 200;
+  border-right: 1px solid white;
+  padding: 0px 8px 0 20px;
+}
+.menu-tablet a .menu__span {
+  color: #f4cbe9;
+}
+.menu-tablet a:last-child {
+  border-right: none;
+  padding-left: 40px;
 }
 
 .top,
@@ -549,6 +591,13 @@ nav {
   letter-spacing: 1px;
   font-weight: 300;
 }
+@media (min-width: 768px) {
+  .main_heading__mob {
+    margin-top: -70px;
+    margin-left: 50px;
+    color: #FFF;
+  }
+}
 .main_heading__mob span {
   text-transform: uppercase;
   font-weight: bold;
@@ -566,12 +615,21 @@ nav {
   font-size: 1.25em;
 }
 
+.modal-content__header h3 {
+  font-weight: 300;
+}
+
+.modal-content__header h5 {
+  text-align: left;
+}
+
 @media (min-width: 768px) {
   .search-input {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
+    margin-top: 50px;
   }
 }
 
@@ -613,15 +671,18 @@ input[type=search],
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #cccccc;
-  border-right: none;
-  border-radius: 4px 0 0 4px;
   padding-left: 10px;
 }
 @media (min-width: 768px) {
   input[type=search],
 .create-note {
-    flex-basis: 55%;
+    width: 50%;
   }
+}
+
+input[type=search] {
+  border-right: none;
+  border-radius: 4px 0 0 4px;
 }
 
 input[type=search]::placeholder {
@@ -629,14 +690,23 @@ input[type=search]::placeholder {
   font-weight: 300;
 }
 
-.search-input button {
+.search-button,
+.note-btn {
   background: #bfabc7;
   height: 2.5em;
   width: 20%;
   border: 1px solid #cccccc;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.search-button {
   border-left: none;
   border-radius: 0 4px 4px 0;
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.note-btn {
+  color: #FFF;
+  background: #d3a5b7;
 }
 
 .search-input button:hover {
@@ -646,10 +716,50 @@ input[type=search]::placeholder {
 
 .create-note {
   box-shadow: 0px 4px 4px #cccccc;
+  border-radius: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .create-note {
+    box-shadow: none;
+  }
+}
+
+.modal-content__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin: 20px auto;
+}
+.modal-content__form form {
+  width: 100%;
+  padding: 20px;
+}
+.modal-content__form form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+input[type=text],
+textarea {
+  background: whitesmoke;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  width: 100%;
+  margin: 6px 0px 30px;
+  font-size: 1.5em;
+}
+
+button {
+  border-radius: 4px;
 }
 
 .note-container {
@@ -682,6 +792,50 @@ input[type=search]::placeholder {
   background: #bfabc7;
   border-radius: 50%;
   margin: 6px 18px 6px 0px;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  z-index: 20000000;
+  background: rgba(172, 174, 176, 0.8);
+  position: fixed;
+  top: 0;
+}
+.modal-content {
+  margin: 10vh auto;
+  width: 90%;
+  max-width: 900px;
+  background: #FFF;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content__header {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.modal-content__colors {
+  width: 95%;
+  background: whitesmoke;
+  border-radius: 2px;
+  margin: auto;
+  padding: 10px 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.modal-content__colors div {
+  height: 15px;
+  width: 15px;
+  background: red;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */

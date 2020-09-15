@@ -21,12 +21,17 @@
                         <div class="overlay-content">
                         <a href="#">About FeatherLITE</a>
                         <a href="#">Get more with FeatherPRO</a>
-                        <a href="#">Sign Out<img src="icons/sign-out-alt-solid.svg" class="sign-out"></a>
+                        <a href="#">Sign Out<img src="icons/sign-out-alt-solid.svg" class="sign-out" alt="signout icon"></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <img src="icons/feather-alt-solid.svg" class="logo">
+            <div class="menu-tablet">
+                <a href="#">About</a>
+                <a href="#">Get <span class="menu__span">FeatherPRO</span></a>
+                <a href="#">   <img src="icons/sign-out-alt-solid.svg" class="sign-out" alt="signout icon"></a>
+            </div>
+            <img src="icons/feather-alt-solid.svg" class="logo" alt="icon of a feather">
         </nav>
     </header>
     <main>
@@ -37,14 +42,58 @@
             <div class="search-input__container">
                 <div class="search-input__contain">
                     <input type="search" id="searchBox" name="searchBox" placeholder="Search..." class="search-box">
-                    <button><i class="fas fa-arrow-right"></i></button>
+                    <button class="search-button"><i class="fas fa-arrow-right"></i></button>
                 </div>
                 <p>Search through your notes</p>
             </div>
 
             <div class="create-note">
                 <p>Create a new note</p>
-                <img src="icons/plus-solid.svg" class="plus">
+                <img src="icons/plus-solid.svg" class="plus" alt="icon of a plus sign">
+            </div>
+            <div class="modal">
+                <div class="modal-content">
+                    <div class="modal-content__header">
+                        <h3>Create a new note</h3>
+                        <div>
+                            <h5>Choose a label</h5>
+                            <div class="modal-content__colors">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="modal-content__form">
+                            <form>
+                                <div>
+                                    <label for="note-title">Give your note a title</label>
+                                    <input type="text" id="note-title" name="note-title">
+                                </div>
+                                <div>
+                                    <label for="note-content">Write down your note</label>
+                                    <textarea rows="10"></textarea>
+                                </div>
+                                <button class="note-btn">Post note</button>
+                            </form>
+                        </div>
+
+                </div>
             </div>
         </div>
         <div class="note-container">
