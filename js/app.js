@@ -12,7 +12,7 @@ const botBar = document.querySelector('.bot');
 const overlay = document.getElementById('myNav');
 
 // let dot = document.getElementsByClassName('dot');
-let dot = document.querySelector('.dot');
+let dots = document.querySelectorAll('.dot');
 
 menu.addEventListener('click', e => {
     if (e.target.className === 'menu') {
@@ -40,7 +40,10 @@ function generateRandomColor()
 }
 
 console.log(generateRandomColor());
-dot.style.backgroundColor = generateRandomColor() // -> #e1ac94
+
+dots.forEach((dot) => {
+    dot.style.backgroundColor = generateRandomColor() // -> #e1ac94
+});
 
 //----------------------
 // End create random color for dot
