@@ -804,8 +804,9 @@ button {
   left: 0;
 }
 .modal-content {
-  margin: 10vh auto;
+  margin: 2vh auto;
   width: 90%;
+  height: 90%;
   max-width: 900px;
   background: #FFF;
   position: relative;
