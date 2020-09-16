@@ -58,25 +58,28 @@ modalClose.addEventListener('click', e => {
 //eeek!!
 
 const submit = document.querySelector('.note-btn');
-const noteTitle = document.getElementById('note-title');
-const noteContent = document.getElementById('note-content');
-const noteContainer = document.querySelector('note-container');
+const noteTitle = document.querySelector('#note-title');
+const noteContent = document.querySelector('#note-content');
+const noteContainer = document.querySelector('.note-container');
 
 submit.addEventListener('click', (e) => {{
-        let note = document.createElement("DIV");
-        let noteContain = document.createElement("DIV");
-        let noteTit = document.createElement("H2");
-        let noteCon = document.createElement("P");
-        note.classList.add('note');
-        noteContain.classList.add('note-content');
-        noteTit.textContent = noteTitle.value;
-        noteCon.textContent = noteContent.value;
-        noteContain.appendChild(noteTit);
-        noteContain.appendChild(noteCon);
-        note.appendChild(noteContain);
-        noteContainer.appendChild(note);
+    // let div = document.createElement("DIV");
+    // div.textContent = "test";
+    // noteContainer.appendChild(div);
+    let note = document.createElement("DIV");
+    let noteContain = document.createElement("DIV");
+    let noteTit = document.createElement("H2");
+    let noteCon = document.createElement("P");
+    note.classList.add('note');
+    noteContain.classList.add('note-content');
+    noteTit.textContent = noteTitle.value;
+    noteCon.textContent = noteContent.value;
+    noteContain.appendChild(noteTit);
+    noteContain.appendChild(noteCon);
+    note.appendChild(noteContain);
+    noteContainer.appendChild(note);
     }
-})
+});
 
 
 ///////From chatapp, use this to get you started//////
@@ -112,13 +115,12 @@ function generateRandomColor()
 {
     let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16); //167777215 amount of colors that exisit black to white
     return randomColor;
-    //random color will be freshly served
 }
 
 console.log(generateRandomColor());
 
 dots.forEach((dot) => {
-    dot.style.backgroundColor = generateRandomColor() // -> #e1ac94
+    dot.style.backgroundColor = generateRandomColor();
 });
 
 //----------------------
