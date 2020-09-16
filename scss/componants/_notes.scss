@@ -1,5 +1,6 @@
 .note-container {
     margin-top: 80px;
+    @include flex($dir: column-reverse);
 }
 
 .note {

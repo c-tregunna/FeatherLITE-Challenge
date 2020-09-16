@@ -9,6 +9,10 @@ body {
     color: $font;
 }
 
+.overflow {
+    overflow: hidden;
+}
+
 header {
     background: $header-bg;
     height: 80px;

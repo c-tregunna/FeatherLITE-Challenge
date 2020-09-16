@@ -52,8 +52,13 @@
     & div {
         height: 15px;
         width: 15px;
-        background: red;
         border-radius: 50%;
+    }
+}
+
+@each $dot, $color in $dots {
+    #{$dot} {
+      background-color: $color;
     }
 }
 

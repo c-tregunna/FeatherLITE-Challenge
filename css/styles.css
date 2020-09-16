@@ -420,6 +420,10 @@ body {
   color: #656b70;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 header {
   background: linear-gradient(to right, #c0abc7 320px, #d8a3b2);
   height: 80px;
@@ -764,6 +768,8 @@ button {
 
 .note-container {
   margin-top: 80px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .note {
@@ -857,8 +863,79 @@ button {
 .modal-content__colors div {
   height: 15px;
   width: 15px;
-  background: red;
   border-radius: 50%;
+}
+
+dot-1 {
+  background-color: #8ba5ff;
+}
+
+dot-2 {
+  background-color: #a28bff;
+}
+
+dot-3 {
+  background-color: #c58bff;
+}
+
+dot-4 {
+  background-color: #e88bff;
+}
+
+dot-5 {
+  background-color: #ff8bb5;
+}
+
+dot-6 {
+  background-color: #ff8b8b;
+}
+
+dot-7 {
+  background-color: #ffa78b;
+}
+
+dot-8 {
+  background-color: #ffbc8b;
+}
+
+dot-9 {
+  background-color: #ffd18b;
+}
+
+dot-10 {
+  background-color: #fff38b;
+}
+
+dot-11 {
+  background-color: #b7ff8b;
+}
+
+dot-12 {
+  background-color: #8bffa5;
+}
+
+dot-13 {
+  background-color: #8bfff1;
+}
+
+dot-14 {
+  background-color: #8bc7ff;
+}
+
+dot-15 {
+  background-color: #FFF;
+}
+
+dot-16 {
+  background-color: #bcbcbc;
+}
+
+dot-17 {
+  background-color: #868686;
+}
+
+dot-18 {
+  background-color: #585858;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -4,6 +4,7 @@
 
 // const contain = document.querySelector('.contain');
 const menu = document.querySelector('.menu');
+const body = document.querySelector('body');
 
 const topBar = document.querySelector('.top');
 const midBar = document.querySelector('.mid');
@@ -24,6 +25,7 @@ menu.addEventListener('click', e => {
         botBar.classList.toggle('changeBot');
         overlay.classList.toggle('overlay__full');
         overlay.style.transition = "all .8s";
+        body.classList.toggle('overflow');
     }
 });
 
@@ -57,54 +59,58 @@ modalClose.addEventListener('click', e => {
 //append it to the note container
 //eeek!!
 
+//Get date for note header
+let date = new Date();
+const days = ["Sun", "Mon", "Tue", "Weds", "Thur", "Fri", "Sat"];
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+let dayName = days[new Date().getDay()];
+let monthName = months[new Date().getMonth()];
+console.log(dayName);
+console.log(monthName);
+
+let today = dayName +' '+ monthName +' '+ date.getDate() +' '+ date.getFullYear();
+
 const submit = document.querySelector('.note-btn');
 const noteTitle = document.querySelector('#note-title');
 const noteContent = document.querySelector('#note-content');
 const noteContainer = document.querySelector('.note-container');
 
-submit.addEventListener('click', (e) => {{
-    // let div = document.createElement("DIV");
-    // div.textContent = "test";
-    // noteContainer.appendChild(div);
+submit.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(noteContent.value === "") {
+         alert("Don't forget to add all your details to your note");
+    } else {
     let note = document.createElement("DIV");
     let noteContain = document.createElement("DIV");
+    let noteHead = document.createElement("DIV");
+    let noteDot = document.createElement("DIV");
+    let noteDate = document.createElement("DIV");
     let noteTit = document.createElement("H2");
     let noteCon = document.createElement("P");
+    noteHead.classList.add('note-header');
+    noteDot.classList.add('dot');
+    noteDate.classList.add('date');
     note.classList.add('note');
     noteContain.classList.add('note-content');
+    noteDate.textContent = today;
     noteTit.textContent = noteTitle.value;
     noteCon.textContent = noteContent.value;
     noteContain.appendChild(noteTit);
     noteContain.appendChild(noteCon);
+    noteHead.appendChild(noteDot);
+    noteHead.appendChild(noteDate);
+    note.appendChild(noteHead);
     note.appendChild(noteContain);
     noteContainer.appendChild(note);
+    noteTitle.value = '';
+    noteContent.value = '';
+    modal.classList.toggle('show');
     }
 });
 
-
-///////From chatapp, use this to get you started//////
-
-// const messageInput = document.querySelector('input.addMessage');
-// const submitButton = document.querySelector('button.submit');
-// const form = document.querySelector('form');
-
-// form.addEventListener('submit', (e) => { //hit enter to submit form. Submit only works on form element
-//     e.preventDefault();
-//     if(messageInput.value === "") { //if you hit enter or send button it will submit form
-//         alert("Don't forget your message");
-//     } else {
-//     let message = document.createElement("DIV");  //create a div element
-//     message.classList.add('message'); // add class message to above div
-//     let text = document.createElement('P'); //create a p element
-//     let span = document.createElement('SPAN'); //create a span element
-//     text.textContent = messageInput.value; //add the vlue of the input to the p tag
-//     span.textContent = `from ${randomName(nameArray)}`; //add a random pres name to the span. Function randomName above creates this
-//     text.appendChild(span); //append the span to the p element
-//     message.appendChild(text); //append the p element to the div
-//     messageInput.value = ''; // return the input to a empty state
-//     messageBlock.appendChild(message); //append the message div to the message-display area
-//     }
-//   });
+//----------------------
+// End Add note to page
+//----------------------
 
 
 //----------------------
