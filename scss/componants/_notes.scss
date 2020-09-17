@@ -1,6 +1,9 @@
 .note-container {
-    margin-top: 80px;
+    margin-top: 60px;
     @include flex($dir: column-reverse);
+    @include medq($break-m) {
+        margin-top: 0;
+    }
 }
 
 .note {

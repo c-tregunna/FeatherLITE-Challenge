@@ -8,8 +8,8 @@
     left: 0;
     &-content {
         margin: 2vh auto;
-        width: 90%;
-        height: 90%;
+        width: 60%;
+        height: auto;
         max-width: 900px;
         background: $white;
         position: relative;
@@ -18,7 +18,7 @@
         &__header {
             text-align: center;
             width: 100%;
-            padding: 10px;
+            padding: 6px;
         }
     }
 }
@@ -56,8 +56,12 @@
     }
 }
 
+.dot-15 {
+    border: 1px solid #ccc;
+}
+
 @each $dot, $color in $dots {
-    #{$dot} {
+    .#{$dot} {
       background-color: $color;
     }
 }

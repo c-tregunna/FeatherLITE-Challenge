@@ -80,15 +80,16 @@ submit.addEventListener('click', (e) => {
     if(noteContent.value === "") {
          alert("Don't forget to add all your details to your note");
     } else {
-    let note = document.createElement("DIV");
-    let noteContain = document.createElement("DIV");
-    let noteHead = document.createElement("DIV");
-    let noteDot = document.createElement("DIV");
-    let noteDate = document.createElement("DIV");
-    let noteTit = document.createElement("H2");
-    let noteCon = document.createElement("P");
+    let note = document.createElement("DIV"); //main note wrapper
+    let noteContain = document.createElement("DIV"); //individual notes
+    let noteHead = document.createElement("DIV"); //header of the note, including date, color dot
+    let noteDot = document.createElement("DIV"); //note dot
+    let noteDate = document.createElement("DIV"); //note date
+    let noteTit = document.createElement("H2"); //note title from the note title input
+    let noteCon = document.createElement("P"); //note content from the note content input
     noteHead.classList.add('note-header');
     noteDot.classList.add('dot');
+    noteDot.style.backgroundColor = generateRandomColor();
     noteDate.classList.add('date');
     note.classList.add('note');
     noteContain.classList.add('note-content');
